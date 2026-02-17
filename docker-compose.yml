@@ -6,9 +6,9 @@ services:
     ports:
       - "8000:8000"
     environment:
-      OPENAI_API_KEY: your_key_here
-      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/tickets
-      REDIS_URL: redis://redis:6379
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
     depends_on:
       - db
       - redis
